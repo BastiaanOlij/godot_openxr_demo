@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceu5eprch2vn6"]
+
+[ext_resource type="Script" path="res://objects/gpu_time.gd" id="1_cp01r"]
+
+[node name="GPUTime" type="Label3D"]
+text = "GPU time:
+min: %0.3fms
+max: %0.3fms
+avg: %0.3fms"
+script = ExtResource("1_cp01r")

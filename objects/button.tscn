@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://bmy80xrnnry4j"]
+
+[ext_resource type="Script" path="res://objects/button.gd" id="1_x3rua"]
+[ext_resource type="Texture2D" uid="uid://rek0t7kubpx4" path="res://assets/pattern.png" id="2_ybdqv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02u0d"]
+albedo_color = Color(0.176471, 0.466667, 1, 1)
+albedo_texture = ExtResource("2_ybdqv")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ljb6b"]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 1.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4tubo"]
+height = 1.0
+radius = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqw2p"]
+albedo_color = Color(1, 1, 0.141176, 1)
+albedo_texture = ExtResource("2_ybdqv")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hitci"]
+top_radius = 0.1
+bottom_radius = 0.15
+height = 0.15
+radial_segments = 32
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nt0xn"]
+albedo_color = Color(1, 1, 0.141176, 1)
+albedo_texture = ExtResource("2_ybdqv")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8wjcy"]
+radius = 0.172756
+
+[node name="Button" type="Node3D"]
+script = ExtResource("1_x3rua")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_02u0d")
+mesh = SubResource("CylinderMesh_ljb6b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_4tubo")
+
+[node name="OffButton" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
+material_override = SubResource("StandardMaterial3D_bqw2p")
+mesh = SubResource("CylinderMesh_hitci")
+
+[node name="OnButton" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nt0xn")
+mesh = SubResource("CylinderMesh_hitci")
+
+[node name="HandDetector" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05758, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HandDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0393188, 0)
+shape = SubResource("SphereShape3D_8wjcy")
+
+[node name="Timeout" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="body_entered" from="HandDetector" to="." method="_on_hand_detector_body_entered"]
+[connection signal="body_exited" from="HandDetector" to="." method="_on_hand_detector_body_exited"]
+[connection signal="timeout" from="Timeout" to="." method="_on_timeout_timeout"]

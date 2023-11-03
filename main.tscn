@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://gvmfk4owutdm"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_jn1yk"]
+[ext_resource type="PackedScene" uid="uid://cpj7vtj6gr3tv" path="res://player.tscn" id="2_igeja"]
+[ext_resource type="PackedScene" uid="uid://bymbq2ruecbhn" path="res://world.tscn" id="2_m075s"]
+[ext_resource type="PackedScene" uid="uid://ceu5eprch2vn6" path="res://objects/gpu_time.tscn" id="4_1brq4"]
+[ext_resource type="PackedScene" uid="uid://bmy80xrnnry4j" path="res://objects/button.tscn" id="4_npiue"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_jn1yk")
+maximum_refresh_rate = 120
+
+[node name="World" parent="." instance=ExtResource("2_m075s")]
+
+[node name="Player" parent="." instance=ExtResource("2_igeja")]
+
+[node name="GPUTime" parent="Player" instance=ExtResource("4_1brq4")]
+transform = Transform3D(0.91131, 0, 0.411721, 0, 1, 0, -0.411721, 0, 0.91131, -0.899467, 2.06105, -2.90659)
+
+[node name="GlowButton" parent="." instance=ExtResource("4_npiue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.28902)
+
+[node name="Label3D" type="Label3D" parent="GlowButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
+text = "Toggle
+Glow
+"
+
+[node name="MSAAButton" parent="." instance=ExtResource("4_npiue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.703561, 0, -4.28902)
+
+[node name="Label3D" type="Label3D" parent="MSAAButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
+text = "Toggle
+MSAA x4
+"
+
+[node name="QuitButton" parent="." instance=ExtResource("4_npiue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3816, 0, -4.28902)
+
+[node name="Label3D" type="Label3D" parent="QuitButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
+text = "Quit
+"
+
+[connection signal="pose_recentered" from="." to="Player" method="recenter"]
+[connection signal="button_toggled" from="GlowButton" to="." method="_on_glow_button_button_toggled"]
+[connection signal="button_toggled" from="MSAAButton" to="." method="_on_msaa_button_button_toggled"]
+[connection signal="button_toggled" from="QuitButton" to="." method="_on_quit_button_button_toggled"]
