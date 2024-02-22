@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_d31c7"]
 [ext_resource type="PackedScene" uid="uid://bbvciliw3xnf6" path="res://objects/black_out.tscn" id="2_ecfc5"]
-[ext_resource type="Script" path="res://xr_action.gd" id="3_fnypk"]
+[ext_resource type="Script" path="res://xr_global_action.gd" id="3_fnypk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xe2ly"]
 

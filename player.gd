@@ -127,4 +127,3 @@ func _physics_process(delta):
 	var is_colliding = _process_on_physical_movement(delta)
 	_process_movement_on_input(is_colliding, delta)
 
-

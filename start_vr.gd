@@ -22,6 +22,9 @@ func _ready():
 		# Make sure v-sync is off, v-sync is handled by OpenXR
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 
+		# Enable VRS
+		vp.vrs_mode = Viewport.VRS_XR
+
 		# Connect the OpenXR events
 		xr_interface.connect("session_begun", _on_openxr_session_begun)
 		xr_interface.connect("session_visible", _on_openxr_visible_state)
