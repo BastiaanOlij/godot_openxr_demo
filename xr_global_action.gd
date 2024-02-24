@@ -1,5 +1,5 @@
 extends Node
-class_name XRAction
+# class_name XRGlobalAction
 
 # This is a signal broker that will react to an action change on any tracker.
 # This should really be build into OpenXRInterface but for now this will do.

@@ -8,7 +8,7 @@
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_jn1yk")
-maximum_refresh_rate = 120
+maximum_refresh_rate = 144
 
 [node name="World" parent="." instance=ExtResource("2_m075s")]
 
@@ -43,7 +43,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
 text = "Quit
 "
 
+[node name="VRSOffButton" parent="." instance=ExtResource("4_npiue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53816, 0, -4.28902)
+
+[node name="Label3D" type="Label3D" parent="VRSOffButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
+text = "VRS
+off"
+
+[node name="VRSLowButton" parent="." instance=ExtResource("4_npiue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04149, 0, -4.28902)
+
+[node name="Label3D" type="Label3D" parent="VRSLowButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
+text = "VRS
+Low"
+
+[node name="VRSMidButton" parent="." instance=ExtResource("4_npiue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55671, 0, -4.28902)
+
+[node name="Label3D" type="Label3D" parent="VRSMidButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
+text = "VRS
+Medium"
+
+[node name="VRSHighButton" parent="." instance=ExtResource("4_npiue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07497, 0, -4.28902)
+
+[node name="Label3D" type="Label3D" parent="VRSHighButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42626, 0)
+text = "VRS
+High"
+
 [connection signal="pose_recentered" from="." to="Player" method="recenter"]
 [connection signal="button_toggled" from="GlowButton" to="." method="_on_glow_button_button_toggled"]
 [connection signal="button_toggled" from="MSAAButton" to="." method="_on_msaa_button_button_toggled"]
 [connection signal="button_toggled" from="QuitButton" to="." method="_on_quit_button_button_toggled"]
+[connection signal="button_toggled" from="VRSOffButton" to="." method="_on_vrs_off_button_button_toggled"]
+[connection signal="button_toggled" from="VRSLowButton" to="." method="_on_vrs_low_button_button_toggled"]
+[connection signal="button_toggled" from="VRSMidButton" to="." method="_on_vrs_mid_button_button_toggled"]
+[connection signal="button_toggled" from="VRSHighButton" to="." method="_on_vrs_high_button_button_toggled"]
