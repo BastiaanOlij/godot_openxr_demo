@@ -22,12 +22,18 @@ func _ready():
 		# Make sure v-sync is off, v-sync is handled by OpenXR
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 
+		# Enable VRS
+		if RenderingServer.get_rendering_device():
+			vp.vrs_mode = Viewport.VRS_XR
+		elif int(ProjectSettings.get_setting("xr/openxr/foveation_level")) == 0:
+			push_warning("OpenXR: Recommend setting Foveation level to High in Project Settings")
+
 		# Connect the OpenXR events
-		xr_interface.connect("session_begun", _on_openxr_session_begun)
-		xr_interface.connect("session_visible", _on_openxr_visible_state)
-		xr_interface.connect("session_focussed", _on_openxr_focused_state)
-		xr_interface.connect("session_stopping", _on_openxr_stopping)
-		xr_interface.connect("pose_recentered", _on_openxr_pose_recentered)
+		xr_interface.session_begun.connect(_on_openxr_session_begun)
+		xr_interface.session_visible.connect(_on_openxr_visible_state)
+		xr_interface.session_focussed.connect(_on_openxr_focused_state)
+		xr_interface.session_stopping.connect(_on_openxr_stopping)
+		xr_interface.pose_recentered.connect(_on_openxr_pose_recentered)
 	else:
 		# We couldn't start OpenXR.
 		print("OpenXR not instantiated!")
