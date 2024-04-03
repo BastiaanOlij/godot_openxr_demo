@@ -4,7 +4,8 @@
 
 [node name="GPUTime" type="Label3D"]
 text = "GPU time:
-min: %0.3fms
+min:	 %0.3fms
 max: %0.3fms
 avg: %0.3fms"
+horizontal_alignment = 0
 script = ExtResource("1_cp01r")
