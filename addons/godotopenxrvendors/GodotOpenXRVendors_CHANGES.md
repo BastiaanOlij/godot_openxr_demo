@@ -10,6 +10,13 @@
 - Add XR_FB_hand_tracking_mesh extension wrapper and OpenXRFbHandTrackingMesh node
 - Add XR_FB_hand_tracking_aim support
 - Update Meta OpenXR mobile SDK to version 62
+- Add a developer-facing API for interacting with scene anchors
+- Add support for developer-created spatial anchors via XR_FB_spatial_entity
+- Add XR_FB_hand_tracking_capsules extension wrapper
+- Add OpenXRFbPassthroughGeometry node
+- Add OpenXRMetaPassthroughColorLut
+- Add feature flags to Khronos loader for HTC
+- Add XR_HTC_passthrough extension wrapper
 
 ## 2.0.3
 - Migrate the export scripts from gdscript to C++ via gdextension

@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bymbq2ruecbhn"]
+[gd_scene load_steps=13 format=3 uid="uid://bymbq2ruecbhn"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_kq6u3"]
 [ext_resource type="Texture2D" uid="uid://rek0t7kubpx4" path="res://assets/pattern.png" id="1_yguss"]
 [ext_resource type="PackedScene" uid="uid://dpn6187qjqo75" path="res://objects/wall.tscn" id="2_350v7"]
 [ext_resource type="PackedScene" uid="uid://c3wwlb4huytmt" path="res://objects/ramp.tscn" id="3_0sele"]
@@ -36,6 +37,7 @@ albedo_texture = ExtResource("1_yguss")
 [sub_resource type="SphereMesh" id="SphereMesh_ba7ff"]
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_kq6u3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 5, 0)

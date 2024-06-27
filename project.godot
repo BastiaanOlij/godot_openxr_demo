@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 settings/stdout/verbose_stdout=true
 
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=600
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godotopenxrvendors/plugin.cfg")
@@ -32,10 +37,15 @@ enabled=PackedStringArray("res://addons/godotopenxrvendors/plugin.cfg")
 
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.396889, 0.396889, 0.396889, 1)
+anti_aliasing/quality/msaa_3d=2
 
 [xr]
 
 openxr/enabled=true
+openxr/environment_blend_mode=2
 openxr/foveation_level=3
 openxr/foveation_dynamic=true
+openxr/submit_depth_buffer=true
+openxr/extensions/eye_gaze_interaction=true
 shaders/enabled=true

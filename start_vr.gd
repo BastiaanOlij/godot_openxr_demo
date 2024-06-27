@@ -5,16 +5,25 @@ signal focus_gained
 signal pose_recentered
 
 @export var maximum_refresh_rate : int = 90
+@export var viewport : SubViewport
 
 var xr_interface : OpenXRInterface
 var xr_is_focussed = false
 
+func get_xr_viewport() -> Viewport:
+	var vp : Viewport = viewport
+	if !vp:
+		vp = super.get_viewport()
+	return vp
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	xr_interface = XRServer.find_interface("OpenXR")
-	if xr_interface and xr_interface.is_initialized():
+	var openxr_interface : OpenXRInterface = XRServer.find_interface("OpenXR")
+	if openxr_interface and openxr_interface.is_initialized():
+		xr_interface = openxr_interface
+
 		print("OpenXR instantiated successfully.")
-		var vp : Viewport = get_viewport()
+		var vp : Viewport = get_xr_viewport()
 
 		# Enable XR on our viewport
 		vp.use_xr = true
@@ -25,6 +34,9 @@ func _ready():
 		# Enable VRS
 		if RenderingServer.get_rendering_device():
 			vp.vrs_mode = Viewport.VRS_XR
+			vp.vrs_update_mode = Viewport.VRS_UPDATE_ONCE
+			openxr_interface.vrs_min_radius = 20.0
+			openxr_interface.vrs_strength = 1.0
 		elif int(ProjectSettings.get_setting("xr/openxr/foveation_level")) == 0:
 			push_warning("OpenXR: Recommend setting Foveation level to High in Project Settings")
 
@@ -34,6 +46,7 @@ func _ready():
 		xr_interface.session_focussed.connect(_on_openxr_focused_state)
 		xr_interface.session_stopping.connect(_on_openxr_stopping)
 		xr_interface.pose_recentered.connect(_on_openxr_pose_recentered)
+		# xr_interface.refresh_rate_changed.connect(_on_refresh_rate_changed)
 	else:
 		# We couldn't start OpenXR.
 		print("OpenXR not instantiated!")
@@ -60,7 +73,7 @@ func _on_openxr_session_begun() -> void:
 	else:
 		print("OpenXR: Available refresh rates: ", available_rates)
 		for rate in available_rates:
-			if rate > new_rate and rate < maximum_refresh_rate:
+			if rate > new_rate and rate <= maximum_refresh_rate:
 				new_rate = rate
 
 	# Did we find a better rate?
@@ -109,3 +122,5 @@ func _on_openxr_pose_recentered() -> void:
 	# This is game implementation dependent.
 	emit_signal("pose_recentered")
 
+func _on_refresh_rate_changed(new_rate) -> void:
+	print("New refresh rate set to ", new_rate)
