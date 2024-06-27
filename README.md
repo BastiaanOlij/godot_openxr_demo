@@ -2,7 +2,7 @@
 
 This demo project is a combination of various smaller demos that are part of the godot-demo-projects repo showing how to use various elements together.
 
-Made for Godot 4.2 onwards
+Made for Godot 4.3 onwards
 
 ## Running on PCVR
 
