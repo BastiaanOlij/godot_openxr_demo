@@ -25,27 +25,27 @@ signal pose_lost_tracking(pose, tracker)
 
 func _button_pressed(action_name : String, tracker : XRPositionalTracker):
 	if action_name == action:
-		emit_signal("button_pressed", tracker)
+		button_pressed.emit(tracker)
 
 func _button_released(action_name : String, tracker : XRPositionalTracker):
 	if action_name == action:
-		emit_signal("button_released", tracker)
+		button_released.emit(tracker)
 
 func _input_float_changed(action_name : String, value : float, tracker : XRPositionalTracker):
 	if action_name == action:
-		emit_signal("input_float_changed", value, tracker)
+		input_float_changed.emit(value, tracker)
 
 func _input_vector2_changed(action_name : String, value : Vector2, tracker : XRPositionalTracker):
 	if action_name == action:
-		emit_signal("input_vector2_changed", value, tracker)
+		input_vector2_changed.emit(value, tracker)
 
 func _pose_changed(pose : XRPose, tracker : XRPositionalTracker):
 	if pose.name == action:
-		emit_signal("pose_changed", pose, tracker)
+		pose_changed.emit(pose, tracker)
 
 func _pose_lost_tracking(pose : XRPose, tracker : XRPositionalTracker):
 	if pose.name == action:
-		emit_signal("pose_lost_tracking", pose, tracker)
+		pose_lost_tracking.emit(pose, tracker)
 
 # New tracker added
 func _tracker_added(tracker_name, _tracker_type):

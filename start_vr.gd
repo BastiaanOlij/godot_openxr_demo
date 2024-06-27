@@ -98,7 +98,7 @@ func _on_openxr_visible_state() -> void:
 		# pause our game
 		process_mode = Node.PROCESS_MODE_DISABLED
 
-		emit_signal("focus_lost")
+		focus_lost.emit()
 
 
 # Handle OpenXR focused state
@@ -109,7 +109,7 @@ func _on_openxr_focused_state() -> void:
 	# unpause our game
 	process_mode = Node.PROCESS_MODE_INHERIT
 
-	emit_signal("focus_gained")
+	focus_gained.emit()
 
 # Handle OpenXR stopping state
 func _on_openxr_stopping() -> void:
@@ -120,7 +120,7 @@ func _on_openxr_stopping() -> void:
 func _on_openxr_pose_recentered() -> void:
 	# User recentered view, we have to react to this by recentering the view.
 	# This is game implementation dependent.
-	emit_signal("pose_recentered")
+	pose_recentered.emit()
 
 func _on_refresh_rate_changed(new_rate) -> void:
 	print("New refresh rate set to ", new_rate)

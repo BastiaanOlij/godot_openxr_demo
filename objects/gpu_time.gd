@@ -12,7 +12,7 @@ func set_viewport(p_vp : Viewport):
 		RenderingServer.viewport_set_measure_render_time(vp.get_viewport_rid(), true)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var resolution : Vector2i = Vector2i()
 
 	if !vp:

@@ -23,7 +23,7 @@ func _ready():
 func _on_hand_detector_body_entered(body):
 	if bodies.size() == 0 and !timeout:
 		button_pressed = !button_pressed
-		emit_signal("button_toggled", button_pressed)
+		button_toggled.emit(button_pressed)
 
 	if !bodies.has(body):
 		bodies.push_back(body)

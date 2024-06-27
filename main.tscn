@@ -23,7 +23,6 @@ shader = SubResource("Shader_3o84c")
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_jn1yk")
-maximum_refresh_rate = 120
 
 [node name="World" parent="." instance=ExtResource("2_m075s")]
 

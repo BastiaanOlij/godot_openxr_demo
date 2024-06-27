@@ -34,11 +34,11 @@ func _on_msaa_button_button_toggled(is_pressed):
 	vp.msaa_3d = Viewport.MSAA_4X if is_pressed else Viewport.MSAA_DISABLED
 
 
-func _on_quit_button_button_toggled(is_pressed):
+func _on_quit_button_button_toggled(_is_pressed):
 	get_tree().quit()
 
 
-func _on_render_size_button_toggled(is_pressed: Variant) -> void:
+func _on_render_size_button_toggled(_is_pressed: Variant) -> void:
 	if xr_interface:
 		if xr_interface.render_target_size_multiplier == 1.0:
 			xr_interface.render_target_size_multiplier = 2.0
@@ -53,7 +53,7 @@ func _on_render_size_button_toggled(is_pressed: Variant) -> void:
 		print("Render target size multiplier set to ", xr_interface.render_target_size_multiplier)
 
 
-func _on_passthrough_button_toggled(is_pressed: Variant) -> void:
+func _on_passthrough_button_toggled(_is_pressed: Variant) -> void:
 	if xr_interface:
 		if xr_interface.environment_blend_mode == XRInterface.XR_ENV_BLEND_MODE_OPAQUE:
 			# TODO: switch between ALPHA_BLEND and ADDITIVE depending on what is available...
