@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxbit6wc88wjy"]
+
+[resource]
+resource_name = "M_0014_DarkSalmon.001"
+albedo_color = Color(0.615762, 0.71296, 0.647221, 1)
+roughness = 0.0
+emission_enabled = true

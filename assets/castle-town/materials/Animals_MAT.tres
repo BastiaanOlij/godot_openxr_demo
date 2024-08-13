@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cmxh506fjm2pl"]
+
+[ext_resource type="Texture2D" uid="uid://brmie6qhg1ag5" path="res://assets/castle-town/textures/AnimalsMAT_BaseColor.png" id="1_srkji"]
+
+[resource]
+resource_name = "Animals_MAT"
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+albedo_texture = ExtResource("1_srkji")
+roughness = 0.0
+emission_enabled = true

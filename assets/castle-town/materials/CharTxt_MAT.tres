@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cv0lf88wv4yo"]
+
+[ext_resource type="Texture2D" uid="uid://d2jpj53y0n2nb" path="res://assets/castle-town/textures/CharTxt_MAT_baseColor.png" id="1_j0i5a"]
+
+[resource]
+resource_name = "CharTxt_MAT"
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+albedo_texture = ExtResource("1_j0i5a")
+roughness = 0.0
+emission_enabled = true

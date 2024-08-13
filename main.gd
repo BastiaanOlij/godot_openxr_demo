@@ -20,7 +20,6 @@ func _ready():
 %0.1f" % [xr_interface.render_target_size_multiplier]
 
 		$Passthrough.button_pressed = xr_interface.environment_blend_mode != XRInterface.XR_ENV_BLEND_MODE_OPAQUE
-		$World.floor_visible = not $Passthrough.button_pressed
 
 	$VRS.button_pressed = vp.vrs_mode == Viewport.VRS_XR
 
@@ -61,13 +60,11 @@ func _on_passthrough_button_toggled(_is_pressed: Variant) -> void:
 			vp.transparent_bg = true
 			env.background_mode = Environment.BG_CLEAR_COLOR
 			env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-			$World.floor_visible = false
 		else:
 			xr_interface.environment_blend_mode = XRInterface.XR_ENV_BLEND_MODE_OPAQUE
 			vp.transparent_bg = false
 			env.background_mode = Environment.BG_SKY
 			env.ambient_light_source = Environment.AMBIENT_SOURCE_BG
-			$World.floor_visible = true
 
 		$Passthrough.button_pressed = xr_interface.environment_blend_mode != XRInterface.XR_ENV_BLEND_MODE_OPAQUE
 

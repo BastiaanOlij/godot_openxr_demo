@@ -24,10 +24,6 @@ settings/stdout/verbose_stdout=true
 window/size/viewport_width=1200
 window/size/viewport_height=600
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godotopenxrvendors/plugin.cfg")
-
 [layer_names]
 
 3d_physics/layer_1="World"
@@ -45,9 +41,11 @@ anti_aliasing/quality/msaa_3d=2
 [xr]
 
 openxr/enabled=true
-openxr/environment_blend_mode=2
+openxr/environment_blend_mode=0
 openxr/foveation_level=3
 openxr/foveation_dynamic=true
 openxr/submit_depth_buffer=true
 openxr/extensions/eye_gaze_interaction=true
 shaders/enabled=true
+openxr/extensions/debug_utils=4
+openxr/extensions/debug_message_types=6

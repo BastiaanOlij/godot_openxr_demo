@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c1cewocs6bsus"]
+
+[resource]
+resource_name = "Stone"
+albedo_color = Color(0.704833, 0.673936, 0.634878, 1)
+roughness = 0.0
+emission_enabled = true

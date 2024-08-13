@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ck0bb7xjv31hl"]
+
+[resource]
+resource_name = "BackColor"
+albedo_color = Color(0.822766, 0.853244, 0.872103, 1)
+roughness = 0.0
+emission_enabled = true

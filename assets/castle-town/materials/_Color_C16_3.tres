@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://de75oxsoony3d"]
+
+[resource]
+resource_name = "_Color_C16_3"
+albedo_color = Color(0.665185, 0.484529, 0, 1)
+roughness = 0.0
+emission_enabled = true

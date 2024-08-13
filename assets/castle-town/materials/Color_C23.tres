@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3clctixs0n7r"]
+
+[resource]
+resource_name = "Color_C23"
+albedo_color = Color(0.484529, 0.4062, 0.302554, 1)
+roughness = 0.0
+emission_enabled = true

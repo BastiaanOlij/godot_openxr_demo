@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://21k6skgponxm"]
+
+[resource]
+resource_name = "Foliage"
+albedo_color = Color(0.206896, 0.545718, 0.218649, 1)
+roughness = 0.0
+emission_enabled = true

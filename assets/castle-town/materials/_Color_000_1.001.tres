@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://catpqpf3dsfx7"]
+
+[resource]
+resource_name = "_Color_000_1.001"
+roughness = 0.0
+emission_enabled = true

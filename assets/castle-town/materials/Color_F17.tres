@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtufaetmgxkbc"]
+
+[resource]
+resource_name = "Color_F17"
+albedo_color = Color(0.526319, 0.665185, 0.302554, 1)
+roughness = 0.0
+emission_enabled = true

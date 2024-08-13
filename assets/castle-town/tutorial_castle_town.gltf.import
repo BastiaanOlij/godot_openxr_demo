@@ -1,0 +1,306 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://o8gxe8jqvwbl"
+path="res://.godot/imported/tutorial_castle_town.gltf-65947da7c6377aa168e93e227dae574c.scn"
+
+[deps]
+
+source_file="res://assets/castle-town/tutorial_castle_town.gltf"
+dest_files=["res://.godot/imported/tutorial_castle_town.gltf-65947da7c6377aa168e93e227dae574c.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"Animals_MAT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Animals_MAT.tres"
+},
+"BackColor": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/BackColor.tres"
+},
+"CharTxt_MAT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/CharTxt_MAT.tres"
+},
+"Color_002.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_002.001.tres"
+},
+"Color_002.003": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_002.003.tres"
+},
+"Color_006.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_006.001.tres"
+},
+"Color_A02.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_A02.001.tres"
+},
+"Color_B25.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_B25.001.tres"
+},
+"Color_C01": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C01.tres"
+},
+"Color_C08": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C08.tres"
+},
+"Color_C08.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C08.001.tres"
+},
+"Color_C08.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C08.002.tres"
+},
+"Color_C10.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C10.001.tres"
+},
+"Color_C12": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C12.tres"
+},
+"Color_C12.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C12.001.tres"
+},
+"Color_C12.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C12.002.tres"
+},
+"Color_C12.003": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C12.003.tres"
+},
+"Color_C12.006": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C12.006.tres"
+},
+"Color_C12.007": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C12.007.tres"
+},
+"Color_C13.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C13.002.tres"
+},
+"Color_C17.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C17.001.tres"
+},
+"Color_C18.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C18.002.tres"
+},
+"Color_C23": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_C23.tres"
+},
+"Color_D01.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_D01.001.tres"
+},
+"Color_F11": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_F11.tres"
+},
+"Color_F17": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_F17.tres"
+},
+"Color_I12": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_I12.tres"
+},
+"Color_L04": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Color_L04.tres"
+},
+"Foliage": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Foliage.tres"
+},
+"Forge_MAT": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Forge_MAT.tres"
+},
+"FrontColor.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/FrontColor.001.tres"
+},
+"FrontColor.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/FrontColor.002.tres"
+},
+"FrontColor.003": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/FrontColor.003.tres"
+},
+"FrontColor.006": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/FrontColor.006.tres"
+},
+"M_0014_DarkSalmon": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0014_DarkSalmon.tres"
+},
+"M_0014_DarkSalmon.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0014_DarkSalmon.001.tres"
+},
+"M_0035_Tan": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0035_Tan.tres"
+},
+"M_0035_Tan.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0035_Tan.001.tres"
+},
+"M_0035_Tan.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0035_Tan.002.tres"
+},
+"M_0077_DarkGreen.003": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0077_DarkGreen.003.tres"
+},
+"M_0077_DarkGreen.005": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0077_DarkGreen.005.tres"
+},
+"M_0077_DarkGreen.006": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/M_0077_DarkGreen.006.tres"
+},
+"Stone": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Stone.tres"
+},
+"Wood_3": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/Wood_3.tres"
+},
+"_65.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_65.002.tres"
+},
+"_Color_000_1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_000_1.tres"
+},
+"_Color_000_1.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_000_1.001.tres"
+},
+"_Color_003_1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_003_1.tres"
+},
+"_Color_003_2": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_003_2.tres"
+},
+"_Color_004_1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_004_1.tres"
+},
+"_Color_005_2": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_005_2.tres"
+},
+"_Color_006_1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_006_1.tres"
+},
+"_Color_006_3": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_006_3.tres"
+},
+"_Color_007_1.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_007_1.002.tres"
+},
+"_Color_C11_2": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_C11_2.tres"
+},
+"_Color_C11_2.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_C11_2.002.tres"
+},
+"_Color_C16_3": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_C16_3.tres"
+},
+"_Color_C16_3.002": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_C16_3.002.tres"
+},
+"_Color_D18_1.003": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_D18_1.003.tres"
+},
+"_Color_E02_1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_E02_1.tres"
+},
+"_Color_I03_2": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_Color_I03_2.tres"
+},
+"_auto_1": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_auto_1.tres"
+},
+"_auto_1.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_auto_1.001.tres"
+},
+"_auto_1.003": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/_auto_1.003.tres"
+},
+"lambert2SG.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/lambert2SG.001.tres"
+},
+"tree_crown.001": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/castle-town/materials/tree_crown.001.tres"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+gltf/naming_version=1
+gltf/embedded_image_handling=1

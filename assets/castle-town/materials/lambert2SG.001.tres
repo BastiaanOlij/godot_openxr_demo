@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ggod0qujpfry"]
+
+[ext_resource type="Texture2D" uid="uid://bjld6pjs72300" path="res://assets/castle-town/textures/Main_Pallete.png" id="1_km3yb"]
+
+[resource]
+resource_name = "lambert2SG.001"
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+albedo_texture = ExtResource("1_km3yb")
+roughness = 0.0
+emission_enabled = true
+uv1_scale = Vector3(1, -1, 1)

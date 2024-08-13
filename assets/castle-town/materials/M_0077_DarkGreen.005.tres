@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://e6b4cgnb4vp1"]
+
+[resource]
+resource_name = "M_0077_DarkGreen.005"
+albedo_color = Color(0.741778, 0.836007, 0.625414, 1)
+roughness = 0.0
+emission_enabled = true

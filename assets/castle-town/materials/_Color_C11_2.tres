@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcp06bkw3nujt"]
+
+[resource]
+resource_name = "_Color_C11_2"
+albedo_color = Color(0.797738, 0.578582, 0, 1)
+roughness = 0.0
+emission_enabled = true

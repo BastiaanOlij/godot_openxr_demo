@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwh8kis23xq8i"]
+
+[resource]
+resource_name = "M_0035_Tan.002"
+albedo_color = Color(0.754406, 0.718312, 0.665185, 1)
+roughness = 0.0
+emission_enabled = true

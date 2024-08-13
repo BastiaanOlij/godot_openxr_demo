@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnsmeg08cx210"]
+
+[resource]
+resource_name = "FrontColor.006"
+roughness = 0.0
+emission_enabled = true
