@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://gvmfk4owutdm"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_jn1yk"]
+[ext_resource type="Script" uid="uid://ph516nj6ltyc" path="res://main.gd" id="1_jn1yk"]
 [ext_resource type="PackedScene" uid="uid://cpj7vtj6gr3tv" path="res://player.tscn" id="2_igeja"]
 [ext_resource type="PackedScene" uid="uid://bymbq2ruecbhn" path="res://world.tscn" id="2_m075s"]
 [ext_resource type="PackedScene" uid="uid://ceu5eprch2vn6" path="res://objects/gpu_time.tscn" id="4_1brq4"]
@@ -8,6 +8,7 @@
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_jn1yk")
+maximum_refresh_rate = 120
 
 [node name="World" parent="." instance=ExtResource("2_m075s")]
 
@@ -15,7 +16,6 @@ script = ExtResource("1_jn1yk")
 
 [node name="GPUTime" parent="Player" instance=ExtResource("4_1brq4")]
 transform = Transform3D(0.91131, 0, 0.411721, 0, 1, 0, -0.411721, 0, 0.91131, -0.899467, 2.06105, -2.90659)
-visible = false
 
 [node name="QuitButton" parent="." instance=ExtResource("4_npiue")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -4)

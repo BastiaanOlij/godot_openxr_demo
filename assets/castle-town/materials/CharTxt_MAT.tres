@@ -6,5 +6,5 @@
 resource_name = "CharTxt_MAT"
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 albedo_texture = ExtResource("1_j0i5a")
-roughness = 0.0
+roughness = 0.7
 emission_enabled = true

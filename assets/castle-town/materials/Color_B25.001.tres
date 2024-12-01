@@ -3,5 +3,5 @@
 [resource]
 resource_name = "Color_B25.001"
 albedo_color = Color(0.484529, 0.442601, 0.432587, 1)
-roughness = 0.0
+roughness = 0.65
 emission_enabled = true

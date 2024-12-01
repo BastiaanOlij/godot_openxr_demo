@@ -6,6 +6,6 @@
 resource_name = "lambert2SG.001"
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 albedo_texture = ExtResource("1_km3yb")
-roughness = 0.0
+roughness = 0.8
 emission_enabled = true
 uv1_scale = Vector3(1, -1, 1)

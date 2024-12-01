@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Godot OpenXR Demo"
 run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [debug]
@@ -45,7 +45,10 @@ openxr/environment_blend_mode=0
 openxr/foveation_level=3
 openxr/foveation_dynamic=true
 openxr/submit_depth_buffer=true
-openxr/extensions/eye_gaze_interaction=true
-shaders/enabled=true
 openxr/extensions/debug_utils=4
 openxr/extensions/debug_message_types=6
+openxr/extensions/hand_tracking=true
+openxr/extensions/hand_tracking_unobstructed_data_source=true
+openxr/extensions/hand_tracking_controller_data_source=true
+openxr/extensions/eye_gaze_interaction=true
+shaders/enabled=true

@@ -35,8 +35,9 @@ func _ready():
 		if RenderingServer.get_rendering_device():
 			vp.vrs_mode = Viewport.VRS_XR
 			vp.vrs_update_mode = Viewport.VRS_UPDATE_ONCE
-			openxr_interface.vrs_min_radius = 20.0
-			openxr_interface.vrs_strength = 1.0
+			# openxr_interface.vrs_min_radius = 20.0
+			# openxr_interface.vrs_strength = 1.0
+			pass
 		elif int(ProjectSettings.get_setting("xr/openxr/foveation_level")) == 0:
 			push_warning("OpenXR: Recommend setting Foveation level to High in Project Settings")
 

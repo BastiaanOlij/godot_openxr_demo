@@ -1,14 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bymbq2ruecbhn"]
+[gd_scene load_steps=8 format=3 uid="uid://bymbq2ruecbhn"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_kq6u3"]
+[ext_resource type="Script" uid="uid://d2yx0b5pkke6t" path="res://world.gd" id="1_kq6u3"]
 [ext_resource type="PackedScene" uid="uid://o8gxe8jqvwbl" path="res://assets/castle-town/tutorial_castle_town.gltf" id="2_73w6c"]
+[ext_resource type="Texture2D" uid="uid://dcipkfdckydfi" path="res://assets/polyhaven.com/sunflowers_puresky_8k.hdr" id="2_tlwt5"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4mshr"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_aqk2v"]
+panorama = ExtResource("2_tlwt5")
 
 [sub_resource type="Sky" id="Sky_kwq44"]
-sky_material = SubResource("ProceduralSkyMaterial_4mshr")
+sky_material = SubResource("PanoramaSkyMaterial_aqk2v")
 
 [sub_resource type="Environment" id="Environment_pcm4o"]
 background_mode = 2
@@ -35,6 +35,7 @@ environment = SubResource("Environment_pcm4o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("WorldBoundaryShape3D_xavpm")
+debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="tutorial_castle_town2" parent="." instance=ExtResource("2_73w6c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.68875, 0, 26.6482)

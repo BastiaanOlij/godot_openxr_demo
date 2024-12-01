@@ -3,5 +3,5 @@
 [resource]
 resource_name = "_auto_1.001"
 albedo_color = Color(0.685381, 0.560628, 0.383458, 1)
-roughness = 0.0
+roughness = 0.7
 emission_enabled = true

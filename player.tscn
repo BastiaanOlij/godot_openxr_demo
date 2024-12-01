@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://cpj7vtj6gr3tv"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_d31c7"]
+[ext_resource type="Script" uid="uid://b7xof0wmk30mm" path="res://player.gd" id="1_d31c7"]
 [ext_resource type="PackedScene" uid="uid://bbvciliw3xnf6" path="res://objects/black_out.tscn" id="2_ecfc5"]
-[ext_resource type="Script" path="res://hand.gd" id="3_40k5e"]
-[ext_resource type="Script" path="res://xr_action.gd" id="3_fnypk"]
+[ext_resource type="Script" uid="uid://bupmmgeyl20p8" path="res://hand.gd" id="3_40k5e"]
+[ext_resource type="Script" uid="uid://dnigecte8qrdt" path="res://xr_action.gd" id="3_fnypk"]
 [ext_resource type="PackedScene" uid="uid://d22k0sp2hinew" path="res://assets/gltf/LeftHandHumanoid.gltf" id="4_cmyfn"]
 [ext_resource type="PackedScene" uid="uid://dlswhmq6s52gu" path="res://assets/gltf/RightHandHumanoid.gltf" id="5_x6o3o"]
 
@@ -26,6 +26,7 @@ script = ExtResource("1_d31c7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_xe2ly")
+debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
@@ -52,6 +53,7 @@ sync_to_physics = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/LeftHandController/AnimatableBody3D"]
 shape = SubResource("SphereShape3D_n2icl")
+debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="LeftHandTracker" type="XRNode3D" parent="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
@@ -76,6 +78,7 @@ sync_to_physics = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/RightHandController/AnimatableBody3D"]
 shape = SubResource("SphereShape3D_n2icl")
+debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="RightHandTracker" type="XRNode3D" parent="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)

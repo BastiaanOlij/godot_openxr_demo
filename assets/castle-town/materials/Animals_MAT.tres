@@ -6,5 +6,5 @@
 resource_name = "Animals_MAT"
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 albedo_texture = ExtResource("1_srkji")
-roughness = 0.0
+roughness = 0.76
 emission_enabled = true
